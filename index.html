@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buheros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #f4a261;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #f4a261;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #e76f51;
+        }
+        p {
+            color: #f4f4f4;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .buheritos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        iframe {
+            width: 90%;
+            max-width: 600px;
+            height: 350px;
+            border-radius: 10px;
+        }
+        aside {
+            margin: 20px 0;
+        }
+        .donacion img {
+            width: 150px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Buheros</h1>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./Nosotros.html">Nosotros</a>
+            <a  href="./Contactos.html">Contacto</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Nosotros</h2>
+            <p>Somos Buheros, un grupo apasionado por la música y el arte. Únete a nuestra comunidad.</p>
+        </section>
+        
+        <section>
+            <h2>Buheritos</h2>
+            <div class="buheritos">
+                <a href="#"><img src="./buheritos 1.jpg" alt="Buheritos 1"></a>
+                <a href="#"><img src="./buheritos.jpg" alt="Buheritos"></a>
+                <a href="#"><img src="./buheros.jpg" alt="Buheros"></a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>EP Completo</h2>
+            <iframe src="https://www.youtube.com/embed/3RRdVdG472U" title="EP Completo" allowfullscreen></iframe>
+        </section>
+        
+        <aside>
+            <img src="./face.png" alt="Facebook">
+            <img src="./wsap.png" alt="WhatsApp">
+            <h3>Facebook / Buheros.2024</h3>
+            <h3>WhatsApp / +541140767192</h3>
+        </aside>
+        
+        <section class="donacion">
+            <h3>Apóyanos con una donación</h3>
+            <a href="#" target="_blank">
+                <img src="./mp.jfif" alt="Donar con Mercado Pago">
+            </a>
+        </section>
+        
+        <section class="#">
+            <h3>Contacto</h3>
+            <p>¡Contáctanos para más información!</p>
+            <p>Buheros Rock</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Buheros. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
