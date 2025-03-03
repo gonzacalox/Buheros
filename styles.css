@@ -1,170 +1,435 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buheros</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="normalize.css">
-    <style>
-        body {
-            font-family: 'Rock Salt', sans-serif;
-            background-color: #121212;
-            color: #f1f1f1;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #000;
-            padding: 20px;
-            border-bottom: 3px solid #f4a261;
-        }
-        h1, h2, h3 {
-            color: #f4a261;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        nav {
-            margin: 10px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #f4a261;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        nav a:hover {
-            color: #e76f51;
-        }
-        p {
-            color: #f4f4f4;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.6;
-        }
-        img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        img:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
-        }
-        .buheritos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        iframe {
-            width: 90%;
-            max-width: 600px;
-            height: 350px;
-            border-radius: 10px;
-            border: none;
-        }
-        aside {
-            margin: 20px 0;
-        }
-        .donacion img {
-            width: 150px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .donacion img:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #000;
-            padding: 15px;
-            margin-top: 20px;
-            border-top: 3px solid #f4a261;
-        }
-        footer p {
-            font-size: 0.9em;
-        }
-        .socials {
-            margin-top: 20px;
-        }
-        .socials img {
-            width: 40px;
-            margin: 0 10px;
-        }
-        .donacion {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.7);
-            margin-top: 30px;
-        }
-        .donacion h3 {
-            color: #e76f51;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Buheros</h1>
-        <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="./Nosotros.html">Nosotros</a>
-            <a href="./Contactos.html">Contacto</a>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Nosotros</h2>
-            <p>Somos Buheros, un grupo apasionado por la música y el arte. Únete a nuestra comunidad.</p>
-        </section>
-        
-        <section>
-            <h2>Buheritos</h2>
-            <div class="buheritos">
-                <a href="#"><img src="./buheritos 1.jpg" alt="Buheritos 1"></a>
-                <a href="#"><img src="./buheritos.jpg" alt="Buheritos"></a>
-                <a href="#"><img src="./buheros.jpg" alt="Buheros"></a>
-            </div>
-        </section>
-        
-        <section>
-            <h2>EP Completo</h2>
-            <iframe src="https://www.youtube.com/embed/3RRdVdG472U" title="EP Completo" allowfullscreen></iframe>
-        </section>
-        
-        <aside class="socials">
-            <a href="https://www.facebook.com/Buheros.2024" target="_blank">
-                <img src="./face.png" alt="Facebook">
-            </a>
-            <a href="https://wa.me/541140767192" target="_blank">
-                <img src="./wsap.png" alt="WhatsApp">
-            </a>
-            <h3>Facebook / Buheros.2024</h3>
-            <h3>WhatsApp / +541140767192</h3>
-        </aside>
-        
-        <section class="donacion">
-            <h3>Apóyanos con una donación</h3>
-            <a href="https://mpago.la/1eHhaQ7" target="_blank">
-                <img src="./mp.jfif" alt="Donar con Mercado Pago">
-            </a>
-        </section>
-        
-        <section>
-            <h3>Contacto</h3>
-            <p>¡Contáctanos para más información!</p>
-            <p>Buheros Rock</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Buheros. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+}
+
+/* Body & Background */
+body {
+    background-color: #121212;
+    color: #fff;
+    padding-top: 50px;
+}
+
+/* Header */
+header {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #ff6347;
+}
+
+header .logo p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: #000 url('band-image-1.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta button:hover {
+    background-color: #e5533d;
+}
+
+/* Carousel */
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .slide {
+    display: none;
+}
+
+.carousel .slide.active {
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6347;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#about img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Concerts Section */
+#concerts {
+    padding: 50px 20px;
+    background: #2c2c2c;
+}
+
+#concerts h2 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.concert-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.concert {
+    background: #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 30%;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.concert:hover {
+    transform: translateY(-10px);
+}
+
+.concert h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.concert p {
+    font-size: 1.2rem;
+}
+
+/* Videos Section */
+#videos {
+    padding: 50px 20px;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+#videos h2 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.video-gallery iframe {
+    width: 100%;
+    max-width: 560px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background: #2c2c2c;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #333;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #e5533d;
+}
+
+/* Donations Section */
+#donations {
+    padding: 50px 20px;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+#donations h2 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+#donations p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#donations button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+#donations button:hover {
+    background-color: #e5533d;
+}
+
+/* Social Media */
+#social-media {
+    background: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+#social-media h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#social-media ul {
+    list-style-type: none;
+}
+
+#social-media ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+#social-media ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#social-media ul li a:hover {
+    color: #ff6347;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .carousel .slide img {
+        width: 100%;
+    }
+
+    .concert-list {
+        flex-direction: column;
+    }
+
+    .concert {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .video-gallery iframe {
+        width: 100%;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+    }
+}
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Esto asegura que el carrusel ocupe toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Cada imagen del carrusel */
+.carousel .slide {
+    display: none;
+    width: 100%;
+    height: 100%; /* Las imágenes deben ocupar toda la altura del carrusel */
+    object-fit: cover; /* Esto asegura que las imágenes se ajusten bien al contenedor */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Imagen activa */
+.carousel .slide.active {
+    display: block;
+}
+
+/* Botones de navegación */
+.carousel .prev,
+.carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.3s;
+}
+
+.carousel .prev:hover,
+.carousel .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
