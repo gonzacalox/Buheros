@@ -5,11 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pagina Oficial De Buheros, Pagina de rock under con videos, imagenes,canciones para indagar online. BUHEROS ROCK .">
-    <meta name="keywords" content="buheros, rock, buhos, zona oeste, que sea rock, under, rock nacional , EP , Album, Discos">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Buheros">
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Buhero Rock" />
+    <meta property="og:title" content="Buheros Rock" />
     <meta property="og:description" content="Disfruta del mejor rock con Buhero Rock, tu tienda de música y productos rockeros." />
     <meta property="og:image" content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgonzacalox.github.io%2FBuheros%2F&psig=AOvVaw3uHtEf-KyrDnT4vX9IaPeP&ust=1741048359257000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODIxtrU7IsDFQAAAAAdAAAAABAE" />
     <meta property="og:url" content="https://gonzacalox.github.io/Buheros" />
@@ -18,219 +17,118 @@
     <title>Buheros | Una Banda Under de Rock</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="normalize.css">
-    <style>
-        /* Reseteo básico */
-        body,
-        h1,
-        h2,
-        h3,
-        p,
-        a {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilos generales */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #F1F9FF;
-            color: #333;
-            line-height: 1.6;
-            text-align: center;
-            padding: 0;
-        }
-
-        header {
-            background-color: #0178A5; /* Azul inspirado en Argentina */
-            color: white;
-            padding: 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #FFDD67; /* Amarillo suave */
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 30px;
-            padding: 20px;
-        }
-
-        /* Sección de 'Nosotros' */
-        section {
-            background-color: #FFF;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            font-size: 2rem;
-            color: #0178A5;
-            margin-bottom: 15px;
-        }
-
-        section p {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        /* Galería de Buheritos */
-        .buheritos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .buheritos img {
-            width: 100%;
-            max-width: 250px;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .buheritos img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Video Embed */
-        iframe {
-            width: 100%;
-            max-width: 700px;
-            height: 400px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        /* Aside de contacto */
-        aside {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        aside img {
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        aside img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Sección de donación */
-        .donacion img {
-            width: 180px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0178A5;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 1rem;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Medios de pantalla */
-        @media (min-width: 768px) {
-            main {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .donacion img {
-                width: 250px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            main {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    </style>
-</head>
-
+    <!DOCTYPE html>
 <body>
     <header>
-        <h1>Buheros</h1>
+        <div class="logo">
+            <h1>Búheros</h1>
+            <p>La mejor banda de rock</p>
+        </div>
         <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="./Nosotros.html">Nosotros</a>
-            <a href="./Contactos.html">Contacto</a>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#concerts">Conciertos</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#donations">Donaciones</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Nosotros</h2>
-            <p>Somos Buheros, un grupo apasionado por la música y el arte. Únete a nuestra comunidad y disfruta del mejor rock independiente.</p>
-        </section>
-
-        <section>
-            <h2>Buheritos</h2>
-            <div class="buheritos">
-                <a href="#"><img src="./buheritos1.jpg" alt="Buheritos 1"></a>
-                <a href="#"><img src="./buheritos2.jpg" alt="Buheritos 2"></a>
-                <a href="#"><img src="./buheritos3.jpg" alt="Buheritos 3"></a>
+    <!-- Sección Principal (Eliminé la duplicación de la sección "home") -->
+    <section id="home" class="hero">
+        <div class="carousel">
+            <div class="slide active">
+                <img src="./buheritos 1.jpg" alt="Búheros en concierto">
             </div>
-        </section>
+            <div class="slide">
+                <img src="./buheritos.jpg" alt="Búheros tocando en vivo">
+            </div>
+            <div class="slide">
+                <img src="./buheros.jpg" alt="Miembros de Búheros en escenario">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="cta">
+            <h2>¡Bienvenidos a la página de Búheros!</h2>
+            <p>Descubre nuestra música, próximos conciertos y cómo puedes apoyar a la banda.</p>
+        </div>
+    </section>
+    
+    <!-- Sección Sobre Nosotros -->
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos Búheros, una banda de música con una mezcla de rock alternativo y sonidos experimentales. Luchamos por hacer música auténtica y conectar con nuestros fans.</p>
+        <img src="./png-transparent-owl-silhouette-thumbnail.png" alt="La banda Búheros">
+    </section>
 
-        <section>
-            <h2>EP Completo</h2>
-            <iframe src="https://www.youtube.com/embed/3RRdVdG472U" title="EP Completo" allowfullscreen></iframe>
-        </section>
+    <!-- Sección Conciertos -->
+    <section id="concerts">
+        <h2>Próximos Conciertos</h2>
+        <div class="concert-list">
+            <div class="concert">
+                <h3>Concierto en Buenos Aires</h3>
+                <p>Fecha: 15 de marzo de 2025</p>
+                <p>Ubicación: Iaios (Merlo)</p>
+            </div>
+          
+        </div>
+    </section>
 
-        <aside>
-            <a href="https://facebook.com"><img src="./face.png" alt="Facebook"></a>
-            <a href="https://wa.me/541140767192"><img src="./wsap.png" alt="WhatsApp"></a>
-        </aside>
 
-        <section class="donacion">
-            <h3>Apóyanos con una donación</h3>
-            <a href="#" target="_blank">
-                <img src="./mp.jfif" alt="Donar con Mercado Pago">
-                <p>Buheros Rock</p>
-            </a>
-        </section>
+    <!-- Sección Videos -->
+    <section id="videos">
+        <h2>Videos</h2>
+        <div class="video-gallery">
+            <iframe width="848" height="480" src="https://www.youtube.com/embed/lZf8-77SJ94" title="Ailén" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            ><iframe width="853" height="480" src="https://www.youtube.com/embed/Mo9sDpYhoX0" title="Ella se hizo canción" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
 
-        <section>
-            <h3>Contacto</h3>
-            <p>¡Contáctanos para más información!</p>
-        </section>
-    </main>
+
+    <h2>Formulario de Contacto</h2>
+    <form action="send_email.php" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+
+    <!-- Sección Donaciones -->
+    <section id="donations">
+        <h2>Haz una Donación</h2>
+        <p>Apoya a Búheros para que sigamos creando música y tocando en vivo. Cualquier donación es apreciada.</p>
+        <a href="https://www.mercadopago.com.ar" target="_blank">
+             <img src="./descarga.png" alt=""></P>
+             <p>Alias : Buheros.rock</p>
+            <button>Donar ahora</button>
+        </a>
+    </section>
+
+    <!-- Redes Sociales -->
+    <aside id="social-media">
+        <h3>Síguenos en nuestras redes sociales:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/buheros_ok" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/buheros.2024" target="_blank">Facebook</a></li>
+            <li><a href="https://www.youtube.com/watch?v=3RRdVdG472U&t=205s" target="_blank">YouTube</a></li>
+        </ul>
+    </aside>
 
     <footer>
-        <p>&copy; 2025 Buheros. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Búheros. Todos los derechos reservados.</p>
     </footer>
-</body>
 
+</body>
 </html>
