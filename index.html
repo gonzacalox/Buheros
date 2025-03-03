@@ -4,25 +4,30 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pagina Oficial De Buheros, Pagina de rock under con videos, imagenes,canciones para indagar online. BUHEROS ROCK .">
+    <meta name="description" content="Página oficial de Buheros, banda de rock alternativo con contenido exclusivo como videos, imágenes y conciertos." />
     <meta name="robots" content="index, follow">
     <meta name="author" content="Buheros">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Buheros Rock" />
-    <meta property="og:description" content="Disfruta del mejor rock con Buhero Rock, tu tienda de música y productos rockeros." />
-    <meta property="og:image" content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgonzacalox.github.io%2FBuheros%2F&psig=AOvVaw3uHtEf-KyrDnT4vX9IaPeP&ust=1741048359257000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODIxtrU7IsDFQAAAAAdAAAAABAE" />
+    <meta property="og:description" content="Disfruta del mejor rock con Buheros Rock, tu tienda de música y productos rockeros." />
+    <meta property="og:image" content="https://tusitio.com/imagen.jpg" />
     <meta property="og:url" content="https://gonzacalox.github.io/Buheros" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Buheros Rock" />
-    <title>Buheros | Una Banda Under de Rock</title>
+    <title>Buheros | Banda de Rock Under</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="normalize.css">
-    <!DOCTYPE html>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+</head>
+
 <body>
     <header>
         <div class="logo">
             <h1>Búheros</h1>
-            <p>La mejor banda de rock</p>
+            <p>La mejor banda de rock alternativo</p>
         </div>
         <nav>
             <ul>
@@ -36,17 +41,17 @@
         </nav>
     </header>
 
-    <!-- Sección Principal (Eliminé la duplicación de la sección "home") -->
+    <!-- Sección Principal (Carrusel Mejorado) -->
     <section id="home" class="hero">
         <div class="carousel">
             <div class="slide active">
-                <img src="./buheritos 1.jpg" alt="Búheros en concierto">
+                <img src="./buheritos 1.jpg" alt="Búheros en concierto" loading="lazy">
             </div>
             <div class="slide">
-                <img src="./buheritos.jpg" alt="Búheros tocando en vivo">
+                <img src="./buheritos.jpg" alt="Búheros tocando en vivo" loading="lazy">
             </div>
             <div class="slide">
-                <img src="./buheros.jpg" alt="Miembros de Búheros en escenario">
+                <img src="./buheros.jpg" alt="Miembros de Búheros en escenario" loading="lazy">
             </div>
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
@@ -56,16 +61,16 @@
             <p>Descubre nuestra música, próximos conciertos y cómo puedes apoyar a la banda.</p>
         </div>
     </section>
-    
+
     <!-- Sección Sobre Nosotros -->
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <h2>Sobre Nosotros</h2>
         <p>Somos Búheros, una banda de música con una mezcla de rock alternativo y sonidos experimentales. Luchamos por hacer música auténtica y conectar con nuestros fans.</p>
-        <img src="./png-transparent-owl-silhouette-thumbnail.png" alt="La banda Búheros">
+        <img src="./png-transparent-owl-silhouette-thumbnail.png" alt="La banda Búheros" loading="lazy">
     </section>
 
     <!-- Sección Conciertos -->
-    <section id="concerts">
+    <section id="concerts" data-aos="fade-left">
         <h2>Próximos Conciertos</h2>
         <div class="concert-list">
             <div class="concert">
@@ -73,51 +78,50 @@
                 <p>Fecha: 15 de marzo de 2025</p>
                 <p>Ubicación: Iaios (Merlo)</p>
             </div>
-          
+            <!-- Agrega más conciertos aquí -->
         </div>
+        <button class="load-more">Ver más conciertos</button>
     </section>
-
 
     <!-- Sección Videos -->
-    <section id="videos">
+    <section id="videos" data-aos="fade-up">
         <h2>Videos</h2>
         <div class="video-gallery">
-            <iframe width="848" height="480" src="https://www.youtube.com/embed/lZf8-77SJ94" title="Ailén" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            ><iframe width="853" height="480" src="https://www.youtube.com/embed/Mo9sDpYhoX0" title="Ella se hizo canción" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="848" height="480" src="https://www.youtube.com/embed/lZf8-77SJ94" title="Ailén" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/Mo9sDpYhoX0" title="Ella se hizo canción" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
         </div>
     </section>
 
+    <!-- Formulario de Contacto -->
+    <section id="contact" data-aos="fade-right">
+        <h2>Formulario de Contacto</h2>
+        <form action="send_email.php" method="POST" id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required><br><br>
 
-    <h2>Formulario de Contacto</h2>
-    <form action="send_email.php" method="POST">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="message">Mensaje:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
-        
-        <button type="submit">Enviar</button>
-    </form>
-</body>
-</html>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
 
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
     <!-- Sección Donaciones -->
-    <section id="donations">
+    <section id="donations" data-aos="fade-left">
         <h2>Haz una Donación</h2>
         <p>Apoya a Búheros para que sigamos creando música y tocando en vivo. Cualquier donación es apreciada.</p>
         <a href="https://www.mercadopago.com.ar" target="_blank">
-             <img src="./descarga.png" alt=""></P>
-             <p>Alias : Buheros.rock</p>
+            <img src="./descarga.png" alt="Logo MercadoPago">
+            <p>Alias: Buheros.rock</p>
             <button>Donar ahora</button>
         </a>
     </section>
 
     <!-- Redes Sociales -->
-    <aside id="social-media">
+    <aside id="social-media" data-aos="fade-up">
         <h3>Síguenos en nuestras redes sociales:</h3>
         <ul>
             <li><a href="https://www.instagram.com/buheros_ok" target="_blank">Instagram</a></li>
@@ -130,5 +134,12 @@
         <p>&copy; 2025 Búheros. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Iniciar animaciones
+    </script>
 </body>
+
 </html>
